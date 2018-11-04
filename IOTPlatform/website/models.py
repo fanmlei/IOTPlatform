@@ -7,12 +7,17 @@ class Data(models.Model):
     data = models.CharField(max_length=32)  # 数据内容
     date = models.DateTimeField()  # 上传时间
 
+class DataStream(models.Model):
+    name = models.CharField(max_length=32, null=False)
+    min = models.IntegerField(null=True)  # 阈值
+    max = models.IntegerField(null=True)
+    data = models.ManyToManyField(Data)
+
 class Device(models.Model):
     device_id = models.IntegerField(unique=True, null=False)  # 设备号
+    device_key = models.CharField(max_length=32, null=True)  # 设备token
     device_name = models.CharField(max_length=32)  # 设备名
-    min = models.IntegerField(null=True)  # 报警阈值
-    max = models.IntegerField(null=True)
-    dev_data = models.ManyToManyField(Data)  #传感器数据
+    dev_stream = models.ManyToManyField(DataStream)  #传感器数据流
 
 class UserInfo(models.Model):
     username = models.CharField(max_length=32, null=False, unique=True, db_index=True)   # 用户名
