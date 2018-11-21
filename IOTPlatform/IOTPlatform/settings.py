@@ -83,9 +83,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'IOTPlatform',
-        'USER': 'root',
-        'PASSWORD': 'fml950826cs',
-        'HOST': '123.207.87.193',
+        'USER': '***',
+        'PASSWORD': '****',
+        'HOST': '****',
         'PORT': '3306',
     }
 }
