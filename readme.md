@@ -35,13 +35,18 @@ http://www.iotforfml.cn
 
 前端负责数据展示，界面使用elementUI，图表使用echarts进行渲染，通过axios获取数据内容<br>
 
-
 ### 项目结构简介
 APPFont: 前端项目<br>
 Hardware: 硬件连接测试代码<br>
 IOTPlatform: 后端项目<br>
 MQTT: 消息持久化服务<br>
 
+### 更新计划
+>>>手机端页面适配（网页或者微信小程序）<br>
+>>>完善触发器通知<br>
+>>>完善接入指南、增加更多的硬件连接示例<br>
+>>>API接口<br>
+
 ### 联系方式
-Email : 15638515832@163.com
+Email : 15638515832@163.com<br>
 QQ: 961160132
